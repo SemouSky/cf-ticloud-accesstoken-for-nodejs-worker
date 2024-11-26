@@ -14,6 +14,8 @@ const Privileges = {
     API: 1
 }
 
+const DefaultExpirationTimeInSeconds = () => Math.floor(new Date() / 1000) + 24 * 3600
+
 class AccessToken {
     originVersion = Version
 
@@ -42,7 +44,7 @@ class AccessToken {
         }
         this.messages = {}
         this.salt = salt || Math.floor(Math.random() * 0xffffffff)
-        this.ts = ts || Math.floor(new Date() / 1000) + 24 * 3600
+        this.ts = ts || DefaultExpirationTimeInSeconds()
     }
 
     build() {
@@ -65,6 +67,9 @@ class AccessToken {
     }
 
     addPrivilege(priviledge, expireTimestamp) {
+        if (!expireTimestamp || isNaN(expireTimestamp) || expireTimestamp <= 0) {
+            expireTimestamp = DefaultExpirationTimeInSeconds
+        }
         this.messages[priviledge] = expireTimestamp
     }
 

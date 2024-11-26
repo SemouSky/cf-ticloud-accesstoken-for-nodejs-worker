@@ -1,6 +1,6 @@
 #:schema node_modules/wrangler/config-schema.json
 name = "cf-ticloud-accesstoken-for-nodejs-worker"
-main = "src/index.js"
+main = "src/AccessTokenWorker.js"
 compatibility_date = "2024-11-12"
 compatibility_flags = ["nodejs_compat"]
 
