@@ -1,8 +1,10 @@
 #:schema node_modules/wrangler/config-schema.json
 name = "cf-ticloud-accesstoken-for-nodejs-worker"
-main = "src/index.js"
+main = "src/AccessTokenWorker.js"
 compatibility_date = "2024-11-12"
 compatibility_flags = ["nodejs_compat"]
+
+workers_dev = false
 
 # Workers Logs
 # Docs: https://developers.cloudflare.com/workers/observability/logs/workers-logs/
