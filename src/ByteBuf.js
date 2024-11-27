@@ -1,3 +1,5 @@
+import { Buffer } from 'buffer'
+
 class ByteBuf {
 
     buffer = Buffer.alloc(1024)

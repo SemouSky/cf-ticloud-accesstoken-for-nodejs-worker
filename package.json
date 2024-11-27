@@ -1,8 +1,7 @@
 {
   "name": "cf-ticloud-accesstoken-for-nodejs-worker",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Cloudflare Worker for TiCloud Access Token,also can use in Node.js",
-  "private": false,
   "exports": {
     ".": {
       "import": "./src/AccessTokenBuilder.js",
@@ -33,7 +32,9 @@
   "type": "module",
   "packageManager": "yarn@4.4.0+sha512.91d93b445d9284e7ed52931369bc89a663414e5582d00eea45c67ddc459a2582919eece27c412d6ffd1bd0793ff35399381cb229326b961798ce4f4cc60ddfdb",
   "dependencies": {
+    "buffer": "^6.0.3",
     "crc-32": "^1.2.2",
+    "crypto-js": "^4.2.0",
     "cuint": "^0.2.2"
   },
   "repository": {

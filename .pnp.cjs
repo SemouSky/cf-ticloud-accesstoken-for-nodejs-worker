@@ -29,7 +29,9 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@cloudflare/vitest-pool-workers", "virtual:ebb435fbb7d58d35fbd33bbed6102c0a8ddb58e142cb59733c5984ea070b0a661372e0aca05b3ba0980af3d73c3e6277dc00c5e86a8230b19789fe68bed85bb6#npm:0.5.31"],\
           ["@eslint/js", "npm:9.15.0"],\
+          ["buffer", "npm:6.0.3"],\
           ["crc-32", "npm:1.2.2"],\
+          ["crypto-js", "npm:4.2.0"],\
           ["cuint", "npm:0.2.2"],\
           ["globals", "npm:15.12.0"],\
           ["vitest", "virtual:ebb435fbb7d58d35fbd33bbed6102c0a8ddb58e142cb59733c5984ea070b0a661372e0aca05b3ba0980af3d73c3e6277dc00c5e86a8230b19789fe68bed85bb6#npm:2.0.5"],\
@@ -1082,6 +1084,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["base64-js", [\
+      ["npm:1.5.1", {\
+        "packageLocation": "../../../.yarn/berry/cache/base64-js-npm-1.5.1-b2f7275641-10c0.zip/node_modules/base64-js/",\
+        "packageDependencies": [\
+          ["base64-js", "npm:1.5.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["birpc", [\
       ["npm:0.2.14", {\
         "packageLocation": "../../../.yarn/berry/cache/birpc-npm-0.2.14-e136059dbc-10c0.zip/node_modules/birpc/",\
@@ -1106,6 +1117,17 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["brace-expansion", "npm:2.0.1"],\
           ["balanced-match", "npm:1.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["buffer", [\
+      ["npm:6.0.3", {\
+        "packageLocation": "../../../.yarn/berry/cache/buffer-npm-6.0.3-cd90dfedfe-10c0.zip/node_modules/buffer/",\
+        "packageDependencies": [\
+          ["buffer", "npm:6.0.3"],\
+          ["base64-js", "npm:1.5.1"],\
+          ["ieee754", "npm:1.2.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1158,7 +1180,9 @@ const RAW_RUNTIME_STATE =
           ["cf-ticloud-accesstoken-for-nodejs-worker", "workspace:."],\
           ["@cloudflare/vitest-pool-workers", "virtual:ebb435fbb7d58d35fbd33bbed6102c0a8ddb58e142cb59733c5984ea070b0a661372e0aca05b3ba0980af3d73c3e6277dc00c5e86a8230b19789fe68bed85bb6#npm:0.5.31"],\
           ["@eslint/js", "npm:9.15.0"],\
+          ["buffer", "npm:6.0.3"],\
           ["crc-32", "npm:1.2.2"],\
+          ["crypto-js", "npm:4.2.0"],\
           ["cuint", "npm:0.2.2"],\
           ["globals", "npm:15.12.0"],\
           ["vitest", "virtual:ebb435fbb7d58d35fbd33bbed6102c0a8ddb58e142cb59733c5984ea070b0a661372e0aca05b3ba0980af3d73c3e6277dc00c5e86a8230b19789fe68bed85bb6#npm:2.0.5"],\
@@ -1272,6 +1296,15 @@ const RAW_RUNTIME_STATE =
           ["path-key", "npm:3.1.1"],\
           ["shebang-command", "npm:2.0.0"],\
           ["which", "npm:2.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["crypto-js", [\
+      ["npm:4.2.0", {\
+        "packageLocation": "../../../.yarn/berry/cache/crypto-js-npm-4.2.0-d6f7744e63-10c0.zip/node_modules/crypto-js/",\
+        "packageDependencies": [\
+          ["crypto-js", "npm:4.2.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1695,6 +1728,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["iconv-lite", "npm:0.6.3"],\
           ["safer-buffer", "npm:2.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["ieee754", [\
+      ["npm:1.2.1", {\
+        "packageLocation": "../../../.yarn/berry/cache/ieee754-npm-1.2.1-fb63b3caeb-10c0.zip/node_modules/ieee754/",\
+        "packageDependencies": [\
+          ["ieee754", "npm:1.2.1"]\
         ],\
         "linkType": "HARD"\
       }]\
