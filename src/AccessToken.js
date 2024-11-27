@@ -1,4 +1,4 @@
-const { createHmac } = await import('node:crypto')
+import Crypto from "node:crypto"
 import CRC32 from "crc-32"
 const str = CRC32.str
 import { UINT32 } from "cuint"
@@ -105,7 +105,7 @@ class AccessToken {
 
 
 const encodeHMac = function (key, message) {
-    return createHmac("sha256", key).update(message).digest()
+    return Crypto.createHmac("sha256", key).update(message).digest()
 }
 
 
