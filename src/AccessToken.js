@@ -1,4 +1,4 @@
-import { createHmac } from "crypto"
+const { createHmac } = await import('node:crypto')
 import CRC32 from "crc-32"
 const str = CRC32.str
 import { UINT32 } from "cuint"

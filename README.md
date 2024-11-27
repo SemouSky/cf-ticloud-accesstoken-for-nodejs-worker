@@ -9,19 +9,19 @@ TiCloud AccessToken tool for Node.js and Cloudflare worker.
 npm:
 
 ```shell
-npm install @semousky/ticloud-accesstoken4node
+npm install cf-ticloud-accesstoken4node-worker
 ```
 
 yarn:
 
 ```shell
-yarn add @semousky/ticloud-accesstoken4node
+yarn add cf-ticloud-accesstoken4node-worker
 ```
 
 ### Use in your project
 
 ```js
-import { AccessTokenBuilder } from `@semousky/ticloud-accesstoken4node/src/AccessTokenBuilder.js`
+import { AccessTokenBuilder } from `cf-ticloud-accesstoken4node-worker/src/AccessTokenBuilder.js`
 
 
 /** Builds an AccessToken with expires. Prefer to use this.*/
@@ -77,4 +77,16 @@ let accessToken = AccessTokenBuilder.buildAccessTokenWithPrivilegeTs(
 
 4. map URL patterns to your worker
 
-For more information, see [set-up-a-route-in-the-dashboard](https://developers.cloudflare.com/workers/configuration/routing/routes/#set-up-a-route-in-the-dashboard)
+    For more information, see [set-up-a-route-in-the-dashboard](https://developers.cloudflare.com/workers/configuration/routing/routes/#set-up-a-route-in-the-dashboard)
+
+5. access your worker
+
+    https:// `YOUR_WORKER_ROUTE` ?enterpriseId=`YOUR_ENTERPRISE_ID`&userId=`YOUR_CUSTOM_USER_ID`&expire=3600&token=`THE_TOKEN`
+
+    - replace `YOUR_WORKER_ROUTE` to your real worker route
+    - replace `YOUR_ENTERPRISE_ID` to your enterprise id
+    - replace `YOUR_CUSTOM_USER_ID` to your custom user id
+    - replace `THE_TOKEN` to your real token
+    - You can also change the expiration time, it must be greater than 600 seconds (10 minutes), prefer using the default value.
+
+    The result will contain two AccessTokens on two lines. They are actually the same. The first line is the same as the `AccessTokenBuilder.buildAccessTokenWithExpires` function result, and the second line is the URL-encoded version of the first line.

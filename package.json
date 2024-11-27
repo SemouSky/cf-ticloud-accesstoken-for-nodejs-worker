@@ -1,5 +1,5 @@
 {
-  "name": "@semousky/ticloud-accesstoken4node",
+  "name": "cf-ticloud-accesstoken-for-nodejs-worker",
   "version": "0.1.0",
   "description": "Cloudflare Worker for TiCloud Access Token,also can use in Node.js",
   "private": false,
