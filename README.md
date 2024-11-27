@@ -21,7 +21,7 @@ yarn add cf-ticloud-accesstoken-for-nodejs-worker
 ### Use in your project
 
 ```js
-import { AccessTokenBuilder } from `cf-ticloud-accesstoken-for-nodejs-worker/src/AccessTokenBuilder.js`
+import { AccessTokenBuilder } from "cf-ticloud-accesstoken-for-nodejs-worker/src/AccessTokenBuilder.js"
 
 
 /** Builds an AccessToken with expires. Prefer to use this.*/
