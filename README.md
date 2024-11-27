@@ -9,19 +9,19 @@ TiCloud AccessToken tool for Node.js and Cloudflare worker.
 npm:
 
 ```shell
-npm install cf-ticloud-accesstoken4node-worker
+npm install cf-ticloud-accesstoken-for-nodejs-worker
 ```
 
 yarn:
 
 ```shell
-yarn add cf-ticloud-accesstoken4node-worker
+yarn add cf-ticloud-accesstoken-for-nodejs-worker
 ```
 
 ### Use in your project
 
 ```js
-import { AccessTokenBuilder } from `cf-ticloud-accesstoken4node-worker/src/AccessTokenBuilder.js`
+import { AccessTokenBuilder } from `cf-ticloud-accesstoken-for-nodejs-worker/src/AccessTokenBuilder.js`
 
 
 /** Builds an AccessToken with expires. Prefer to use this.*/
