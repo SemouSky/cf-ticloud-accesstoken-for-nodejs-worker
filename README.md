@@ -38,7 +38,7 @@ let accessToken = AccessTokenBuilder.buildAccessToken(
     `xxxxxxxx`, // The enterpriseId issued to you by TiCloud
     `xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`, // The token issued to you by TiCloud
     `userid`,   // The user id custom by yourself
-    1732674693  // Represented by the number of seconds elapsed since 1/1/1970, alway equal recent time plus expire time in second, for example : Math.floor(new Date()/1000) + 3600
+    1732674693  // Represented by the number of seconds elapsed since 1/1/1970, alway equal recent time plus expire time in second, for example : Math.floor(Date.now()/1000) + 3600
 )
 
 
@@ -47,7 +47,7 @@ let accessToken = AccessTokenBuilder.buildAccessTokenWithPrivilegeTs(
     `xxxxxxxx`, // The enterpriseId issued to you by TiCloud
     `xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`, // The token issued to you by TiCloud
     `userid`,   // The user id custom by yourself
-    1732674693,  // Represented by the number of seconds elapsed since 1/1/1970, alway equal recent time plus expire time in second, for example : Math.floor(new Date()/1000) + 3600
+    1732674693,  // Represented by the number of seconds elapsed since 1/1/1970, alway equal recent time plus expire time in second, for example : Math.floor(Date.now()/1000) + 3600
     123456,     // Random int value use as salt
     1732674693  // Timestamp, not used now
 )

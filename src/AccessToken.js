@@ -1,9 +1,9 @@
-import Crypto from "node:crypto"
+import CryptoJS from "crypto-js"
 import CRC32 from "crc-32"
-const str = CRC32.str
 import { UINT32 } from "cuint"
 import { ByteBuf } from "./ByteBuf.js"
 import { ReadByteBuf } from "./ReadByteBuf.js"
+import { Buffer } from 'buffer'
 
 
 
@@ -57,7 +57,7 @@ class AccessToken {
         let toSign = Buffer.concat([Buffer.from(this.enterpriseId, "utf8"), Buffer.from(this.userId, "utf8"), m])
 
         let signature = encodeHMac(this.token, toSign)
-        let crcUserId = UINT32(str(this.userId)).and(UINT32(0xffffffff)).toNumber()
+        let crcUserId = UINT32(CRC32.str(this.userId)).and(UINT32(0xffffffff)).toNumber()
         let content = AccessTokenContent({
             signature: signature,
             crcUserId: crcUserId,
@@ -105,7 +105,8 @@ class AccessToken {
 
 
 const encodeHMac = function (key, message) {
-    return Crypto.createHmac("sha256", key).update(message).digest()
+    const messageWordArray = CryptoJS.lib.WordArray.create(message)
+    return Buffer.from(CryptoJS.HmacSHA256(messageWordArray, key).toString(CryptoJS.enc.Hex), 'hex')
 }
 
 
